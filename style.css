@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.question_list::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+
 ul{
     list-style: none;
 }
@@ -31,7 +36,8 @@ ul{
     margin-bottom: 20px;
 }
 
-.question_list{
+
+  .question_list{
    display: flex;
    flex-direction: column;
    overflow-y: scroll;
@@ -39,10 +45,36 @@ ul{
 
 .question_box{
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .question{
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+}
+
+.line {
+    margin-top: 10px;
+    border: 1px solid rgb(93, 91, 91);
+}
+
+.question span{
+    font-size: 1.3rem;
+}
+
+.question_box .answer{
+    font-size: 1rem;
+    display: none;
+}
+
+.show_ans .answer{
+   
+    display: block;
+}
+
+.rotate{
+    transform: rotate(180deg);
 }
